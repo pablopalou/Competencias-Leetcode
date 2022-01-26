@@ -1,4 +1,6 @@
 #BIWEEKLY CONTEST 70
+
+# 663 / 17655
 from typing import List # tmb se puede usar list en vez de List sin necesidad de importar
 class Solution:
     def minimumCost(self, cost: List[int]) -> int:
