@@ -111,3 +111,25 @@ return ans
 
 
 """
+#using bitwise operators (superluminal)
+
+"""
+a = statements
+n = len(a)
+m = 1<<n
+pc = [0]*m #en pc[i] guardo la cantidad de unos en el numero binario i
+for i in range(1,m): 
+    pc[i] = pc[i&(i-1)] + 1 #sumo 1 a todos los que tienen un uno en el mismo lugar
+
+def _check(msk):
+    t = [(msk >> i)&1 for i in range(n)] #aca en t guardo la mascara. 0 si la persona no es confiable. 1 si la persona es confiable. 
+    for i in range(n):
+        if t[i]==0: continue
+        for j in range(n):
+            if a[i][j]==2: continue
+            if t[j] != a[i][j]: return False
+    return True
+
+return max(pc[msk] for msk in range(m) if _check(msk))
+
+"""
