@@ -1,4 +1,5 @@
 #Biweekly_Contest_71_Top_8%
+# 1335 / 16927
 from typing import List
 
 #Ejercicio 1 ---- 5:03 
